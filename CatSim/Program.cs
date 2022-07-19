@@ -15,7 +15,7 @@
 
             while (player.Cat.IsAlive)
             {
-                Console.WriteLine($"turn {gameTurn++}");
+                Console.WriteLine($"\n turn {gameTurn++}");
                 Console.WriteLine($"Status \n Money = ${player.Money} \n Tiredness = {player.Tiredness} \n {player.Cat.Name}'s hunger = {player.Cat.Hunger} \n {player.Cat.Name}'s happiness = {player.Cat.Happiness} \n Inventory = {String.Join("", player.Inventory)}");
                 Console.WriteLine("What would you like to do? \n W - Go to work \n P - Play with your cat \n R - Rest \n F - Feed your Cat \n S - Go shopping");
 
@@ -73,7 +73,6 @@
                     player.Cat.IsAlive = false;
                 }
             }
-        }
-        
+        } 
     }
 }

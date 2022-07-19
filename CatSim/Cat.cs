@@ -12,6 +12,7 @@ namespace CatSim
         private int happiness = 5;
 
         public bool IsAlive { get; set; } = true;
+
         public int Hunger
         {
             get
@@ -33,7 +34,9 @@ namespace CatSim
                 }
             }
         }
+
         public string Name { get; set; }
+
         public int Happiness
         {
             get
@@ -50,6 +53,5 @@ namespace CatSim
                 }
             }
         }
-
     }
 }

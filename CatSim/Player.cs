@@ -10,7 +10,7 @@ namespace CatSim
     {
         public List<string> Inventory { get; set; } = new List<string>();
         public Cat Cat { get; set; } = new Cat();
-        public int Money { get; set; } = 100;
+        public int Money { get; set; } = 10;
         public int Tiredness { get; set; } = 0;
 
         public void GoToWork()
