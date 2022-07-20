@@ -17,7 +17,9 @@
             {
                 Console.WriteLine($"\n turn {gameTurn++}");
                 Console.WriteLine($"Status \n Money = ${player.Money} \n Tiredness = {player.Tiredness} \n {player.Cat.Name}'s hunger = {player.Cat.Hunger} \n {player.Cat.Name}'s happiness = {player.Cat.Happiness} \n Inventory = {String.Join("", player.Inventory)}");
-                Console.WriteLine("What would you like to do? \n W - Go to work \n P - Play with your cat \n R - Rest \n F - Feed your Cat \n S - Go shopping");
+                Console.WriteLine("What would you like to do? \n W - Go to work (+$5, -1 hapiness, +1 hunger, +2 tiredness) " +
+                    "\n P - Play with your cat (+2 hapiness, +1 hunger, +1 tiredness) \n R - Rest (+1 hunger, -2 tiredness) " +
+                    "\n F - Feed your Cat (-2 hunger, +1 Tiredness) \n S - Go shopping (Does not progress a turn)");
 
                 TakeTurn();
 

@@ -10,7 +10,7 @@ namespace CatSim
     {
         public List<string> Inventory { get; set; } = new List<string>();
         public Cat Cat { get; set; } = new Cat();
-        public int Money { get; set; } = 10;
+        public int Money { get; set; } = 5;
         public int Tiredness { get; set; } = 0;
 
         public void GoToWork()
@@ -25,7 +25,7 @@ namespace CatSim
         public void PlayWithCat()
         {
             Cat.Hunger = Cat.Hunger + 1;
-            Tiredness = Tiredness - 1;
+            Tiredness = Tiredness + 1;
             if (Inventory.Contains("Cat Toy, "))
             {
                 Console.WriteLine("You used the Cat toy to play with " + Cat.Name);
@@ -55,8 +55,7 @@ namespace CatSim
 
         public void FeedCat()
         {
-            Cat.Happiness = Cat.Happiness + 1;
-            Tiredness = Tiredness - 1;
+            Tiredness = Tiredness + 1;
             if (Inventory.Contains("Gourmet Cat food, "))
             {
                 Console.WriteLine("You fed " + Cat.Name + " with the Gourmet Cat food");
@@ -74,6 +73,7 @@ namespace CatSim
             string playerChoice = "";
             int itemCost = 0;
             string shopInventory = "";
+            Program.gameTurn--;
 
             do
             {
